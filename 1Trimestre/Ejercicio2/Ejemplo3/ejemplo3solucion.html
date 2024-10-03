@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usabilidad en las imágenes</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .image-container {
+      margin: 20px 0;
+    }
+
+    /* Imagen optimizada */
+    .image-container img {
+      max-width: 100%; /* Para que la imagen se ajuste al tamaño del contenedor */
+      height: auto;
+    }
+
+    /* Estilo para la imagen de fondo */
+    .background-image {
+      background-image: url('https://www.eniun.com/wp-content/uploads/Tutorial-Usabilidad-1-900x450.png');
+      background-size: cover;
+      height: 300px;
+      padding: 20px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+    }
+
+    /* Capa semitransparente para mejorar el contraste */
+    .background-image::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Oscurecer la imagen para mejorar la legibilidad */
+      z-index: 1;
+    }
+
+    /* Texto mejorado sobre la imagen */
+    .background-image p {
+      position: relative;
+      z-index: 2;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Usabilidad en las imágenes</h1>
+  
+  <p>Imagen optimizada para la web con etiqueta alt descriptiva:</p>
+  <div class="image-container">
+    <img src="https://www.eniun.com/wp-content/uploads/Curso-Visual-Studio-Code.png" alt="Curso de Visual Studio Code">
+  </div>
+
+  <p>Texto con buen contraste sobre imagen de fondo:</p>
+  <div class="background-image">
+    <p>Este es un texto ahora legible sobre una imagen de fondo mejorada.</p>
+  </div>
+</body>
+</html>
