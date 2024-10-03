@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario usable</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif, Times, serif;
+      font-size: 14px;
+      background-color: #cecccc;
+    }
+    .form-container {
+      width: 90%;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #000;
+      border-radius: 10px;
+      background-color: #f1f1f1;
+      box-shadow: 10px 5px 7px rgb(126, 126, 126);
+    }
+    .form-field {
+      margin-bottom: 20px;
+    }
+    .form-field input,
+    .form-field textarea {
+      width: 100%;
+      padding: 5px;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .form-field label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .form-field input:focus,
+    .form-field textarea:focus {
+      background-color: #eeebeb;
+      border-color: #1d4adf;
+    }
+    .submit-button {
+      background-color: #0436a3;
+      border: 1px solid #000000;
+      color: #ffffff;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 5px;
+      width: 10rem;
+    }
+    .submit-button:hover {
+      background-color: #1d4adf;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Formulario</h1>
+    <form>
+      <div class="form-field">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Pon tu nombre aquí">
+      </div>
+      <div class="form-field">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="Pon tu e-mail aquí">
+      </div>
+      <div class="form-field">
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Pon tu número de teléfono aquí">
+      </div>
+      <div class="form-field">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Pon tu mensaje aquí"></textarea>
+      </div>
+      <button type="submit" class="submit-button">Enviar</button>
+    </form>
+  </div>
+</body>
+</html>
